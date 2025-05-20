@@ -1,0 +1,31 @@
+linguagem usada portugol studio
+  
+Descrição do Funcionamento do Programa
+ Objetivo do Programa:
+Realizar o cadastro de até 10 alunos, com informações como:
+Nome, idade, curso, turno, matrícula, e e-mail.
+Se o aluno for menor de idade, também cadastra o responsável.
+
+
+O programa possui:
+
+validarIdade()
+Retorna verdadeiro se a idade for maior que zero.
+
+ ValEmail()
+Verifica se o e-mail digitado contém @ e .com
+Se inválido, solicita nova entrada até que seja correto.
+
+ mjknturno()
+Recebe um número (1, 2, ou 3) e retorna:
+1 → Matutino
+2 → Vespertino
+3 → Noturno
+
+Repete até que o número seja válido.
+
+ inicio()
+Pede os dados do aluno.
+Se menor de 18, pede dados do responsável.
+Valida idade e e-mail.
+Mostra todas as informações ao final de cada cadastro.
