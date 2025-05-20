@@ -1,0 +1,10 @@
+ Descrição do Funcionamento
+O programa é uma calculadora simples que:
+Pede ao usuário um sinal da operação: +, -, *, /.
+Pede dois números inteiros (n1 e n2).
+Usa a estrutura escolha (switch) para:
+Realizar a operação indicada (+, -, *, ou /).
+Mostrar o resultado na tela.
+Se for divisão, verifica se o divisor (n2) é diferente de zero.
+Caso o sinal digitado não seja válido, exibe uma mensagem de erro.
+linguagem e o portugol studio
