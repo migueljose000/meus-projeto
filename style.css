@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    /* Cores ajustadas para uma vibe mais natureza */
+    --primary-color: #2E8B57; /* Verde mar, um verde vibrante e natural */
+    --secondary-color: #3CB371; /* Verde primavera, um verde um pouco mais claro */
+    --text-color: #2F4F4F; /* Cinza escuro esverdeado, para textos, mais suave que preto */
+    --light-bg: #F0FFF0; /* Branco Esverdeado, um fundo muito claro e fresco */
+    --dark-bg: #2E8B57; /* Usando a cor primária para o cabeçalho, forte conexão com a natureza */
+    --white: #fff;
+    --border-color: #A9D1A9; /* Verde claro acinzentado, para bordas e divisões */
+    --promo-color: #FFD700; /* Dourado para destaque da promoção */
+    --promo-text-color: #8B4513; /* Marrom escuro para texto da promoção */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg); /* Usando o novo --light-bg para o fundo do corpo */
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: var(--dark-bg); /* O cabeçalho ficará com o verde mais forte */
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(9, 10, 9, 0.562);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--white); /* Texto do título do cabeçalho em branco para contrastar com o verde escuro */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color); /* Verde claro no hover da navegação */
+}
+
+/* --- Seção de Promoção --- */
+.promo-banner {
+    background-color: var(--promo-color); /* Dourado para o banner de promoção */
+    color: var(--promo-text-color); /* Texto em marrom escuro */
+    text-align: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeInDown 0.8s ease-out; /* Animação para o banner */
+}
+
+.promo-banner h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--promo-text-color);
+}
+
+.promo-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.promo-banner .promo-btn {
+    background-color: var(--primary-color); /* Botão da promoção com a cor primária */
+    color: var(--white);
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.promo-banner .promo-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Seção Principal (Hero) --- */
+.hero {
+    /* Use uma imagem de natureza exuberante aqui para complementar a vibe */
+    background: url('https://www.les3vallees.com/media/cache/hero_single/ete-activite-solo-trail-courchevel-arthur-bertrand-1920x1080-473.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Overlay escuro para legibilidade do texto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* --- Botões --- */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color); /* Botão principal no verde forte */
+    color: var(--white);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color); /* Verde mais claro no hover */
+    transform: translateY(-2px);
+}
+
+#downloadPdfBtn {
+    background-color: var(--secondary-color); /* Botão de download também verde */
+}
+
+#downloadPdfBtn:hover {
+    background-color: var(--primary-color); /* Inverte o tom no hover */
+}
+
+/* --- Seções de Conteúdo --- */
+.section-content {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white); /* Fundo branco para o conteúdo, em contraste com o verde do body */
+    border-bottom: 1px solid var(--border-color); /* Bordas com cor de natureza */
+}
+
+.section-content:last-of-type {
+    border-bottom: none;
+}
+
+.section-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color); /* Títulos de seção no verde forte */
+    position: relative;
+}
+
+.section-content h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color); /* Linha decorativa no verde mais claro */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+
+/* --- Galeria de Imagens --- */
+#galeria .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03);
+}
+
+#galeria .btn {
+    display: block;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+/* --- Formulário de Inscrição --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--border-color); /* Borda do formulário com cor de natureza */
+    border-radius: 8px;
+    background-color: var(--white); /* Fundo do formulário em branco para contraste */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color); /* Rótulos do formulário no verde forte */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2); /* Sombra do foco com tom de verde */
+}
+
+form .btn {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+#registrationMessage {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #E6FFE6; /* Fundo verde muito claro para sucesso */
+    color: #006400; /* Texto verde escuro para sucesso */
+    border: 1px solid #90EE90; /* Borda verde clara */
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Estilo para o preço exibido */
+#precoExibido {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--dark-bg); /* Rodapé com o verde forte do cabeçalho */
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 50px;
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-content {
+        padding: 40px 15px;
+    }
+
+    .section-content h2 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .promo-banner h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .promo-banner h2 {
+        font-size: 1.2rem;
+    }
+    .promo-banner p {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Ajustes para Seção de Altura Total (Cadastro) --- */
+.full-height-section {
+    min-height: calc(100vh - 100px); /* Ajusta para a altura da viewport menos o cabeçalho/rodapé */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.full-height-section form {
+    margin-top: 20px; /* Espaço entre o título e o formulário */
+}
+
+/* Centraliza o formulário e suas mensagens/botões */
+.full-height-section #registrationMessage,
+.full-height-section #downloadPdfBtn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- SEÇÃO: Premiações e Kits --- */
+.awards-section,
+.shirt-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--light-bg); /* Fundo claro para seções internas */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.awards-section h3,
+.shirt-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.awards-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.awards-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.awards-section ul li strong {
+    color: var(--primary-color); /* Destaca os ícones e termos */
+}
+
+.awards-section p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.shirt-preview {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shirt-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.shirt-preview img:hover {
+    transform: scale(1.02);
+}
+
+.shirt-preview p {
+    margin-top: 15px;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Responsividade para a nova seção */
+@media (max-width: 768px) {
+    .awards-section h3,
+    .shirt-section h3 {
+        font-size: 1.5rem;
+    }
+    .awards-section ul li {
+        font-size: 1rem;
+    }
+}

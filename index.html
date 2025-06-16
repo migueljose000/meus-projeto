@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida na Natureza - Aventura!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Corrida na Natureza</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre o Evento</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#premios-camisas">Premiações e Camisas</a></li>
+                <li><a href="#inscricao">Inscrição</a></li>
+              
+               
+            </ul>
+        </nav>
+    </header>
+
+  
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Conecte-se com a natureza. Desafie-se!</h2>
+                <p>Participe da nossa próxima aventura de corrida em trilhas e florestas exuberantes.</p>
+                <a href="#inscricao" class="btn">Inscreva-se Já!</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="section-content">
+            <h2>Sobre a Corrida</h2>
+            <p>Nossa corrida é mais do que um desafio físico; é uma experiência de imersão na natureza. Com percursos desafiadores e vistas deslumbrantes, você terá a oportunidade de testar seus limites enquanto desfruta da beleza natural.</p>
+            <p>Oferecemos diferentes categorias para todos os níveis, do iniciante ao experiente. Venha fazer parte dessa comunidade que ama a natureza e o esporte!</p>
+        </section>
+
+        <section id="galeria" class="section-content">
+            <h2>Galeria de Fotos</h2>
+            <div class="image-gallery">
+            </div>
+            <button id="loadMoreImages" class="btn">Carregar Mais Imagens</button>
+        </section>
+
+        <section id="premios-camisas" class="section-content">
+            <h2>Premiações e Kits</h2>
+
+            <div class="awards-section">
+                <h3>Premiações por Categoria</h3>
+                <p>Celebramos o esforço e a dedicação de todos os participantes! Os três primeiros colocados (feminino e masculino) de cada categoria (5km, 10km e 21km) receberão:</p>
+                <ul>
+                    <li>Troféu de participação especial</li>
+                    <li>Medalha exclusiva da Corrida na Natureza</li>
+                    <li>Kit de produtos dos nossos patrocinadores</li>
+                </ul>
+                <p>Além disso, todos os corredores que completarem o percurso receberão uma medalha de participação ao cruzar a linha de chegada, simbolizando sua conquista!</p>
+            </div>
+
+            <div class="shirt-section">
+                <h3>Design da Camisa Oficial</h3>
+                <p>Confira o design exclusivo da camisa que será entregue a todos os inscritos. Confortável e com tecnologia de ponta, perfeita para suas corridas!</p>
+                <div class="shirt-preview">
+                    <img src="preview-2025-06-16T16_27_08.826Z.png" alt="Design da Camisa Oficial da Corrida na Natureza">
+                    <p>Feita com tecido leve e respirável para o seu conforto na trilha.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscricao" class="section-content full-height-section">
+            <h2>Formulário de Inscrição</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" >
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione a categoria</option>
+                        <option value="5k">5km</option>
+                        <option value="10k">10km</option>
+                        <option value="21k">21km (Meia Maratona)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço da Inscrição:</label>
+                    <p id="precoExibido">R$ 0,00</p>
+                </div>
+                <button type="submit" class="btn">Inscrever-se</button>
+            </form>
+            <p id="registrationMessage" style="display: none;"></p>
+            <button id="downloadPdfBtn" class="btn" style="display: none;">Baixar Comprovante PDF</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Corrida na Natureza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
